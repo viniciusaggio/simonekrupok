@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Simone Krupok Matias | Pneumologista Goiânia</title>
+    <meta name="description" content="Dra. Simone Krupok Matias - Pneumologista e Tisiologista em Goiânia. Especialista em Fibrose Pulmonar, DPOC, Asma. Atendimento Online e Presencial.">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --rosa: #e84a7a;
+            --rosa-claro: #f5a0b8;
+            --rosa-suave: #fce4ec;
+            --rosa-escuro: #c2185b;
+            --azul: #1a3a5c;
+            --azul-claro: #2c5282;
+            --dourado: #c9a96e;
+            --branco: #ffffff;
+            --off-white: #faf8f5;
+            --texto: #2d3748;
+            --texto-claro: #718096;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--texto);
+            background: var(--off-white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+        
+        .fonte-escrita { font-family: 'Dancing Script', cursive; }
+        
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--off-white); }
+        ::-webkit-scrollbar-thumb { background: var(--rosa); border-radius: 4px; }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%; z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(232, 74, 122, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        nav.scrolled { box-shadow: 0 10px 40px rgba(232, 74, 122, 0.15); }
+        
+        .nav-container {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem; font-weight: 700;
+            color: var(--azul);
+            text-decoration: none;
+        }
+        
+        .logo .rosa { 
+            color: var(--rosa); 
+            font-family: 'Dancing Script', cursive; 
+            font-weight: 700; 
+        }
+        
+        .nav-links {
+            display: flex; gap: 2.5rem; list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none; color: var(--texto);
+            font-weight: 500; font-size: 0.95rem;
+            position: relative; transition: color 0.3s;
+        }
+        
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -5px; left: 0;
+            width: 0; height: 2px; background: var(--rosa);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--rosa); }
+        .nav-links a:hover::after { width: 100%; }
+        
+        .mobile-menu-btn {
+            display: none; background: none; border: none;
+            font-size: 1.5rem; color: var(--rosa); cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--rosa-suave) 50%, #e8f0f8 100%);
+            position: relative; overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: ''; position: absolute; top: -10%; right: -5%;
+            width: 400px; height: 400px;
+            background: var(--rosa);
+            border-radius: 50%;
+            opacity: 0.15;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: ''; position: absolute; bottom: -10%; left: -5%;
+            width: 300px; height: 300px;
+            background: var(--azul);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        .hero-container {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; padding: 2rem; align-items: center;
+            position: relative; z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.2rem; color: var(--azul);
+            line-height: 1.2; margin-bottom: 0.5rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-content .titulo-rosa {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem; color: var(--rosa);
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-content .subtitulo {
+            font-size: 1.2rem; color: var(--texto-claro);
+            margin-bottom: 0.5rem; font-weight: 400;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .hero-content .destaque-texto {
+            font-size: 1.4rem; color: var(--rosa-escuro);
+            font-weight: 600; margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .badge-atendimento {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            color: var(--branco);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 5px 20px rgba(232, 74, 122, 0.3);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .hero-content .credentials {
+            display: flex; flex-wrap: wrap; gap: 1rem;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+        
+        .credential-badge {
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            padding: 0.6rem 1.2rem; border-radius: 50px;
+            color: var(--branco); font-size: 0.85rem;
+            box-shadow: 0 5px 15px rgba(232, 74, 122, 0.3);
+        }
+        
+        .credential-badge.azul {
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            box-shadow: 0 5px 15px rgba(26, 58, 92, 0.3);
+        }
+        
+        .hero-buttons {
+            display: flex; gap: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem; border-radius: 50px;
+            text-decoration: none; font-weight: 600;
+            transition: all 0.3s ease; display: inline-flex;
+            align-items: center; gap: 0.5rem; font-size: 1rem;
+        }
+        
+        .btn-rosa {
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            color: var(--branco);
+            box-shadow: 0 10px 30px rgba(232, 74, 122, 0.3);
+        }
+        
+        .btn-rosa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(232, 74, 122, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent; color: var(--rosa);
+            border: 2px solid var(--rosa);
+        }
+        
+        .btn-outline:hover {
+            background: var(--rosa); color: var(--branco);
+        }
+        
+        .hero-image {
+            position: relative; animation: fadeIn 1.5s ease;
+            display: flex; justify-content: center;
+        }
+        
+        .hero-image .image-placeholder {
+            width: 100%; max-width: 400px; aspect-ratio: 1;
+            background: linear-gradient(135deg, rgba(232,74,122,0.2), rgba(26,58,92,0.2));
+            border-radius: 30px;
+            border: 3px solid var(--rosa);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            color: var(--rosa);
+            font-size: 5rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-image .image-placeholder p {
+            font-size: 1rem; margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+            color: var(--azul);
+        }
+        
+        .floating-card {
+            position: absolute;
+            background: var(--branco);
+            padding: 1.2rem 1.5rem; border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(232, 74, 122, 0.15);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-card.card-1 {
+            bottom: 10%; left: -10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-card.card-2 {
+            top: 10%; right: -5%;
+            animation-delay: 2s;
+        }
+        
+        .floating-card .icon {
+            font-size: 1.5rem; color: var(--rosa);
+            margin-bottom: 0.3rem;
+        }
+        
+        .floating-card .number {
+            font-size: 1.8rem; font-weight: 700;
+            color: var(--azul); font-family: 'Playfair Display', serif;
+        }
+        
+        .floating-card .label {
+            font-size: 0.8rem; color: var(--texto-claro);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Section Styles */
+        section { padding: 6rem 2rem; }
+        
+        .section-container {
+            max-width: 1200px; margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center; margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem; color: var(--azul);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-header .titulo-rosa {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem; color: var(--rosa);
+        }
+        
+        .section-header .divider {
+            width: 80px; height: 4px;
+            background: linear-gradient(90deg, var(--rosa), var(--dourado));
+            margin: 1rem auto; border-radius: 2px;
+        }
+        
+        .section-header p {
+            color: var(--texto-claro); font-size: 1.1rem;
+            max-width: 600px; margin: 1rem auto 0;
+        }
+        
+        /* About Section */
+        .about {
+            background: var(--branco);
+            position: relative;
+        }
+        
+        .about::before {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 200px; height: 200px;
+            background: var(--rosa);
+            border-radius: 0 0 0 200px;
+            opacity: 0.05;
+        }
+        
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image .img-frame {
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-claro));
+            border-radius: 30px; padding: 1rem;
+            position: relative;
+        }
+        
+        .about-image .img-placeholder {
+            background: var(--branco); border-radius: 20px;
+            aspect-ratio: 3/4; display: flex;
+            flex-direction: column; align-items: center;
+            justify-content: center; color: var(--rosa);
+            font-size: 4rem;
+        }
+        
+        .about-image .img-placeholder p {
+            font-size: 0.9rem; color: var(--texto-claro);
+            font-family: 'Inter', sans-serif; margin-top: 0.5rem;
+        }
+        
+        .about-content h3 {
+            font-size: 2rem; color: var(--azul);
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-content .subtitulo-rosa {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem; color: var(--rosa);
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-content p {
+            color: var(--texto-claro); margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .about-content p strong {
+            color: var(--azul);
+        }
+        
+        .about-stats {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem; margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center; padding: 1.5rem;
+            background: var(--rosa-suave); border-radius: 20px;
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--rosa);
+        }
+        
+        .stat-item .number {
+            font-size: 2rem; font-weight: 700;
+            color: var(--rosa); font-family: 'Playfair Display', serif;
+        }
+        
+        .stat-item .label {
+            font-size: 0.85rem; color: var(--texto-claro);
+            margin-top: 0.3rem;
+        }
+        
+        /* Services Section */
+        .services {
+            background: linear-gradient(180deg, var(--off-white) 0%, var(--rosa-suave) 100%);
+            position: relative;
+        }
+        
+        .services::before {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 150px; height: 150px;
+            background: var(--azul);
+            border-radius: 0 150px 0 0;
+            opacity: 0.05;
+        }
+        
+        .services-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: var(--branco); border-radius: 25px;
+            padding: 2.5rem; transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative; overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 5px;
+            background: linear-gradient(90deg, var(--rosa), var(--dourado));
+            transform: scaleX(0); transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(232, 74, 122, 0.15);
+            border-color: var(--rosa-claro);
+        }
+        
+        .service-card:hover::before { transform: scaleX(1); }
+        
+        .service-card .icon {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            border-radius: 20px; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.8rem; color: var(--branco);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(232, 74, 122, 0.2);
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem; color: var(--azul);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--texto-claro); font-size: 0.95rem;
+        }
+        
+        /* Publications Section */
+        .publications { background: var(--branco); }
+        
+        .pub-grid {
+            display: grid; gap: 1.5rem;
+        }
+        
+        .pub-card {
+            display: flex; gap: 1.5rem; padding: 2rem;
+            background: var(--off-white); border-radius: 20px;
+            transition: all 0.3s;
+            border-left: 5px solid var(--rosa);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pub-card::after {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 100px; height: 100px;
+            background: var(--rosa);
+            border-radius: 0 0 0 100px;
+            opacity: 0.05;
+        }
+        
+        .pub-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 40px rgba(232, 74, 122, 0.15);
+        }
+        
+        .pub-card .pub-icon {
+            font-size: 2.5rem; color: var(--rosa);
+            flex-shrink: 0;
+        }
+        
+        .pub-card .pub-content h4 {
+            font-size: 1.1rem; color: var(--azul);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pub-card .pub-content p {
+            color: var(--texto-claro); font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pub-card .pub-content .journal {
+            font-size: 0.85rem;
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            color: var(--branco); font-weight: 600;
+            padding: 0.3rem 0.8rem; border-radius: 20px;
+            display: inline-block;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+            color: var(--branco);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact::before {
+            content: ''; position: absolute; top: -100px; right: -100px;
+            width: 300px; height: 300px;
+            background: var(--rosa);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        
+        .contact::after {
+            content: ''; position: absolute; bottom: -50px; left: -50px;
+            width: 200px; height: 200px;
+            background: var(--dourado);
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+        
+        .contact .section-header h2,
+        .contact .section-header p { color: var(--branco); }
+        
+        .contact .section-header .divider {
+            background: linear-gradient(90deg, var(--rosa), var(--dourado));
+        }
+        
+        .contact-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 4rem; align-items: start;
+            position: relative; z-index: 1;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem; margin-bottom: 1.5rem;
+        }
+        
+        .contact-info p {
+            color: rgba(255,255,255,0.9); margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex; align-items: center; gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item .icon {
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            border-radius: 15px; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 1.2rem; color: var(--branco);
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(232, 74, 122, 0.3);
+        }
+        
+        .contact-item .info h4 {
+            font-size: 0.9rem; color: var(--rosa-claro);
+            margin-bottom: 0.2rem; font-family: 'Inter', sans-serif;
+            font-weight: 500;
+        }
+        
+        .contact-item .info p,
+        .contact-item .info a {
+            color: var(--branco); text-decoration: none;
+            font-size: 1rem; transition: color 0.3s;
+        }
+        
+        .contact-item .info a:hover { color: var(--rosa-claro); }
+        
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 30px; padding: 2.5rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block; margin-bottom: 0.5rem;
+            color: var(--rosa-claro); font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%; padding: 1rem 1.2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 15px; background: rgba(255,255,255,0.1);
+            color: var(--branco); font-size: 1rem;
+            transition: all 0.3s; font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group input::placeholder,
+        .form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none; border-color: var(--rosa);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        
+        .submit-btn {
+            width: 100%; padding: 1.2rem;
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            color: var(--branco); border: none;
+            border-radius: 15px;
+            font-size: 1.1rem; font-weight: 700;
+            cursor: pointer; transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 10px 30px rgba(232, 74, 122, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(232, 74, 122, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--azul);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        footer .footer-content {
+            max-width: 1200px; margin: 0 auto;
+        }
+        
+        footer .logo-footer {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem; color: var(--branco);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer .logo-footer .rosa {
+            font-family: 'Dancing Script', cursive;
+            color: var(--rosa);
+        }
+        
+        footer p { margin-bottom: 1rem; font-size: 0.9rem; }
+        
+        footer .social-links {
+            display: flex; justify-content: center; gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        footer .social-links a {
+            width: 45px; height: 45px;
+            background: linear-gradient(135deg, var(--rosa), var(--rosa-escuro));
+            border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            color: var(--branco); text-decoration: none;
+            transition: all 0.3s; font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(232, 74, 122, 0.3);
+        }
+        
+        footer .social-links a:hover {
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 10px 25px rgba(232, 74, 122, 0.4);
+        }
+        
+        footer .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem; margin-top: 2rem;
+            font-size: 0.85rem; color: rgba(255,255,255,0.5);
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--branco); font-size: 1.8rem;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.3);
+            transition: all 0.3s; z-index: 999;
+            animation: pulse-whatsapp 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37,211,102,0.4);
+        }
+        
+        @keyframes pulse-whatsapp {
+            0%, 100% { box-shadow: 0 10px 30px rgba(37,211,102,0.3); }
+            50% { box-shadow: 0 10px 30px rgba(37,211,102,0.6); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-container,
+            .about-grid,
+            .contact-grid { grid-template-columns: 1fr; }
+            
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content .titulo-rosa { font-size: 2.5rem; }
+            
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            
+            .floating-card { display: none; }
+            
+            .hero-image { order: -1; margin-bottom: 2rem; }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            
+            .hero-content h1 { font-size: 1.8rem; }
+            .hero-content .titulo-rosa { font-size: 2rem; }
+            .hero-buttons { flex-direction: column; }
+            
+            .services-grid { grid-template-columns: 1fr; }
+            
+            .about-stats { grid-template-columns: 1fr; }
+            
+            section { padding: 4rem 1.5rem; }
+            
+            .pub-card { flex-direction: column; }
+        }
+        
+        /* Scroll Animation */
+        .reveal {
+            opacity: 0; transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1; transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Dra. Simone <span class="rosa">Krupok</span></a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#publicacoes">Publicações</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="badge-atendimento">
+                    <i class="fas fa-video"></i>
+                    <span>Atendimento Online e Presencial</span>
+                </div>
+                <h1>Dra. Simone</h1>
+                <div class="titulo-rosa">Krupok Matias</div>
+                <p class="subtitulo">Pneumologista e Tisiologista</p>
+                <p class="destaque-texto">Doutora em Fibrose Pulmonar</p>
+                
+                <div class="credentials">
+                    <span class="credential-badge"><i class="fas fa-id-card"></i> CRM-GO 17.760</span>
+                    <span class="credential-badge azul"><i class="fas fa-certificate"></i> RQE 15.506</span>
+                    <span class="credential-badge"><i class="fas fa-graduation-cap"></i> Doutoranda UNIFESP</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn btn-rosa">
+                        <i class="fas fa-calendar-check"></i> Agendar Consulta
+                    </a>
+                    <a href="#sobre" class="btn btn-outline">
+                        <i class="fas fa-user-md"></i> Conheça a Dra. Simone
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user-md"></i>
+                    <p>Foto da Dra. Simone</p>
+                </div>
+                <div class="floating-card card-1">
+                    <div class="icon"><i class="fas fa-star"></i></div>
+                    <div class="number">5.0</div>
+                    <div class="label">Avaliação Doctoralia</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <div class="number">+1000</div>
+                    <div class="label">Pacientes Atendidos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="section-container">
+            <div class="about-grid reveal">
+                <div class="about-image">
+                    <div class="img-frame">
+                        <div class="img-placeholder">
+                            <i class="fas fa-user-md"></i>
+                            <p>Foto Profissional</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Dra. Simone Lobo</h3>
+                    <div class="subtitulo-rosa">Krupok Matias</div>
+                    <p><strong>Pneumologista e Tisiologista</strong> com formação pela PUC Goiás e residência em Clínica Médica no Hospital de Urgências de Goiânia (HUGO).</p>
+                    <p>Residência em Pneumologia e Tisiologia com <strong>RQE nº 15.506</strong>. Atualmente <strong>doutoranda</strong> no grupo de Doenças Pulmonares Intersticiais da UNIFESP.</p>
+                    <p>Autora de artigos científicos publicados em revistas indexadas, com foco em pesquisa clínica e epidemiologia das doenças pulmonares no Brasil.</p>
+                    <p>Atendimento em Goiânia com ênfase em <strong>empatia, escuta ativa e pontualidade</strong> — reconhecida pelos pacientes no Doctoralia.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="number">10+</div>
+                            <div class="label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">5+</div>
+                            <div class="label">Artigos Publicados</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="number">100%</div>
+                            <div class="label">Dedicação ao Paciente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2>Especialidades e</h2>
+                <div class="titulo-rosa">Serviços</div>
+                <div class="divider"></div>
+                <p>Atendimento completo em pneumologia com tecnologia de ponta e abordagem humanizada</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-lungs"></i></div>
+                    <h3>Doenças Pulmonares Intersticiais</h3>
+                    <p>Diagnóstico e tratamento especializado de fibrose pulmonar, pneumonite por hipersensibilidade e outras DPLs. Acompanhamento com protocolos atualizados.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-wind"></i></div>
+                    <h3>DPOC e Asma</h3>
+                    <p>Manejo completo da Doença Pulmonar Obstrutiva Crônica e asma brônquica. Tripla terapia, controle de exacerbações e reabilitação pulmonar.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-virus"></i></div>
+                    <h3>Tisiologia e Tuberculose</h3>
+                    <p>Tratamento da tuberculose pulmonar e extrapulmonar com acompanhamento rigoroso, garantindo adesão terapêutica e cura.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-x-ray"></i></div>
+                    <h3>Exames Complementares</h3>
+                    <p>Solicitação e interpretação de tomografia de tórax, espirometria, gasometria arterial, teste de caminhada e outros exames pulmonares.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-bed-pulse"></i></div>
+                    <h3>Sono e Respiração</h3>
+                    <p>Avaliação de distúrbios do sono relacionados à respiração, incluindo apneia do sono e hipoxemia noturna.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="icon"><i class="fas fa-smoking"></i></div>
+                    <h3>Tabagismo</h3>
+                    <p>Programa de cessação do tabagismo com abordagem multidisciplinar, medicamentosa e acompanhamento psicológico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="publications" id="publicacoes">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2>Publicações</h2>
+                <div class="titulo-rosa">Científicas</div>
+                <div class="divider"></div>
+                <p>Pesquisa clínica de excelência com impacto na prática médica brasileira</p>
+            </div>
+            <div class="pub-grid">
+                <div class="pub-card reveal">
+                    <div class="pub-icon"><i class="fas fa-file-medical-alt"></i></div>
+                    <div class="pub-content">
+                        <h4>Incidência Relativa de Doenças Pulmonares Intersticiais no Brasil</h4>
+                        <p>Estudo multicêntrico de 1.406 casos em seis centros brasileiros de referência em DPL, identificando padrões epidemiológicos e fatores de risco.</p>
+                        <span class="journal">Jornal Brasileiro de Pneumologia, 2024</span>
+                    </div>
+                </div>
+                <div class="pub-card reveal">
+                    <div class="pub-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="pub-content">
+                        <h4>Doenças Associadas à Doença do Tecido Conjuntivo (DPI-DTC)</h4>
+                        <p>Análise da frequência e características clínicas das DPLs relacionadas a doenças autoimunes no cenário brasileiro.</p>
+                        <span class="journal">PMC / PubMed Central</span>
+                    </div>
+                </div>
+                <div class="pub-card reveal">
+                    <div class="pub-icon"><i class="fas fa-lungs-virus"></i></div>
+                    <div class="pub-content">
+                        <h4>Tripla Terapia na DPOC: Trocando Múltiplos Dispositivos pelo Dispositivo Único</h4>
+                        <p>Revisão sobre otimização do tratamento da DPOC com terapia fixa combinada, melhorando adesão e resultados clínicos.</p>
+                        <span class="journal">Chiesi Connect Medical News, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <h2>Agende sua</h2>
+                <div class="titulo-rosa">Consulta</div>
+                <div class="divider"></div>
+                <p>Entre em contato e dê o primeiro passo para cuidar da sua saúde respiratória</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Informações de Contato</h3>
+                    <p>Atendimento com hora marcada. Para emergências, procure o pronto-socorro mais próximo.</p>
+                    
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-phone"></i></div>
+                        <div class="info">
+                            <h4>Telefone / WhatsApp</h4>
+                            <a href="https://wa.me/5562993403514" target="_blank">(62) 99340-3514</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info">
+                            <h4>Endereço</h4>
+                            <p>Rua 27, 309 — Goiânia, GO</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-id-card"></i></div>
+                        <div class="info">
+                            <h4>Registro Profissional</h4>
+                            <p>CRM-GO: 17.760 | RQE: 15.506</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-clock"></i></div>
+                        <div class="info">
+                            <h4>Horário de Atendimento</h4>
+                            <p>Segunda a Sexta — consultar disponibilidade</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-globe"></i></div>
+                        <div class="info">
+                            <h4>Doctoralia</h4>
+                            <a href="https://www.doctoralia.com.br/simone-krupok/pneumologista/goiania" target="_blank">Agendar pelo Doctoralia →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form reveal">
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone / WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(62) 99999-9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="motivo">Motivo da Consulta</label>
+                            <select id="motivo" name="motivo" required>
+                                <option value="">Selecione...</option>
+                                <option value="rotina">Consulta de Rotina</option>
+                                <option value="dpoc">DPOC / Asma</option>
+                                <option value="dpi">Doença Pulmonar Intersticial</option>
+                                <option value="tuberculose">Tuberculose</option>
+                                <option value="tabagismo">Cessação do Tabagismo</option>
+                                <option value="exames">Interpretação de Exames</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem (opcional)</label>
+                            <textarea id="mensagem" name="mensagem" placeholder="Conte um pouco sobre sua situação..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Solicitar Agendamento
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo-footer">Dra. Simone <span class="rosa">Krupok</span></div>
+            <p>Pneumologista e Tisiologista — Goiânia, GO</p>
+            <p>CRM-GO 17.760 | RQE 15.506</p>
+            
+            <div class="social-links">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/5562993403514" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 Dra. Simone Krupok Matias. Todos os direitos reservados.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Este site é informativo e não substitui a consulta médica. Em caso de emergência, procure atendimento imediato.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5562993403514" class="whatsapp-float" target="_blank" title="Fale no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '100%';
+            navLinks.style.left = '0';
+            navLinks.style.right = '0';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.background = 'rgba(255,255,255,0.98)';
+            navLinks.style.padding = '2rem';
+            navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
+        }
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            const message = `Olá Dra. Simone! Gostaria de agendar uma consulta.%0A%0A` +
+                `*Nome:* ${data.nome}%0A` +
+                `*E-mail:* ${data.email}%0A` +
+                `*Telefone:* ${data.telefone}%0A` +
+                `*Motivo:* ${data.motivo}%0A` +
+                `*Mensagem:* ${data.mensagem || 'Nenhuma mensagem adicional.'}`;
+            
+            window.open(`https://wa.me/5562993403514?text=${message}`, '_blank');
+        }
+
+        // Phone mask
+        document.getElementById('telefone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length <= 11) {
+                value = value.replace(/(\d{2})(\d)/, '($1) $2');
+                value = value.replace(/(\d{5})(\d)/, '$1-$2');
+            }
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
